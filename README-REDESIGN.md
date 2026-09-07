@@ -1,51 +1,20 @@
-# Sarah International — Premium GitHub Pages Redesign
+# Sarah International – Premium Responsive Redesign
 
-This version is redesigned to closely follow the supplied reference layout:
-- full-width image hero with text over the image
-- premium navy / white / gold Sarah International branding
-- single Products dropdown with the four product pages
-- Services replaces "Our Commitment"
-- Contact is a prominent header button
-- product cards use the supplied images as background images with text overlays
-- responsive layout for desktop, tablet and mobile
-- consistent header/footer and relative GitHub Pages paths
-- premium sample logo in `images/logo.svg`, easy to replace later
+This package contains the updated GitHub Pages-ready website.
 
-## Required images
+## Main changes
+- Homepage follows the supplied reference direction: navy/gold branding, full-width image hero, text over images, clean sections and product cards.
+- Products is one navigation item with a four-item dropdown.
+- Services replaces the old Our Commitment navigation item.
+- Contact is a prominent gold button.
+- Homepage product cards now use the supplied product images visibly behind the wording.
+- Drilling Solutions and Contract Manufacturing use the same consistent inner-page banner height as the other product pages.
+- Mobile navigation has a dedicated hamburger menu and a tap-to-open Products dropdown.
+- Product cards, hero banners, buttons, statistics and footer adapt to small screens without horizontal overflow.
+- All pages use the same stylesheet and navigation structure.
 
-The HTML references the image filenames already used in the repository:
+## Image filenames
+The `images/` folder includes the 12 supplied/renamed product images. If these files already exist in your GitHub repository, you can keep them; the HTML references use these exact filenames.
 
-01_Hydraulic_Cylinders_Product_Range.jpg
-02_Quarry_Drilling_Rig.jpg
-03_Tricone_Roller_Cone_Drill_Bit.jpg
-04_Diesel_Air_Compressor.jpg
-05_Welding_and_Dimensional_Inspection.jpg
-06_Heavy_Equipment_Manufacturing_Facility.jpg
-07_Surface_Drilling_Rig_Quarry.jpg
-08_Excavator_Attachments_and_Buckets.jpg
-09_Heavy_Fabrication_Welding.jpg
-10_Dual_Drilling_Hammers.jpg
-11_Drilling_Bit_and_Rod_Handling.jpg
-12_Horizontal_Directional_Drilling_Machine.jpg
-
-Keep the existing `images` folder and filenames when copying this package into GitHub.
-
-## Files to replace/add
-
-Replace:
-- `index.html`
-- `about.html`
-- `hydraulic-cylinders.html`
-- `excavator-attachments.html`
-- `drilling-solutions.html`
-- `contract-manufacturing.html`
-- `contact.html`
-- `css/styles.css`
-- `js/main.js`
-- `images/logo.svg`
-- `images/favicon.svg`
-
-Add:
-- `services.html`
-
-Commit these changes to the branch used by GitHub Pages.
+## GitHub Pages
+Upload/replace the website files in the repository root, keeping the `images`, `css`, and `js` folders. Commit to the branch configured for GitHub Pages.
