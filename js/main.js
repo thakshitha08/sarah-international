@@ -4,35 +4,51 @@ document.addEventListener('DOMContentLoaded', function () {
   const dropdown = document.querySelector('.has-dropdown');
   const productsButton = document.querySelector('.products-link');
 
+  function closeDropdown() {
+    if (!dropdown || !productsButton) return;
+    dropdown.classList.remove('open');
+    productsButton.setAttribute('aria-expanded', 'false');
+  }
+
+  function closeNav() {
+    if (!nav || !toggle) return;
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    closeDropdown();
+  }
+
   if (toggle && nav) {
-    toggle.addEventListener('click', function () {
+    toggle.addEventListener('click', function (event) {
+      event.stopPropagation();
       const open = nav.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (!open) closeDropdown();
     });
   }
 
   if (productsButton && dropdown) {
     productsButton.addEventListener('click', function (event) {
       event.preventDefault();
+      event.stopPropagation();
       const open = dropdown.classList.toggle('open');
       productsButton.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
     document.addEventListener('click', function (event) {
-      if (!dropdown.contains(event.target)) {
-        dropdown.classList.remove('open');
-        productsButton.setAttribute('aria-expanded', 'false');
-      }
+      if (!dropdown.contains(event.target)) closeDropdown();
     });
   }
 
   document.querySelectorAll('.main-nav a').forEach(function (link) {
     link.addEventListener('click', function () {
-      if (nav) nav.classList.remove('is-open');
-      if (toggle) toggle.setAttribute('aria-expanded', 'false');
-      if (dropdown) dropdown.classList.remove('open');
-      if (productsButton) productsButton.setAttribute('aria-expanded', 'false');
+      closeNav();
     });
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 860) {
+      closeNav();
+    }
   });
 
   const yearEl = document.getElementById('year');
