@@ -12,20 +12,26 @@
 
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="brand">
-      <span class="brand-mark">Sarah <span>International</span></span>
-      <span class="brand-tagline">Heavy Equipment Manufacturing</span>
+    <a href="index.html" class="brand" aria-label="Sarah International home">
+      <img class="brand-logo" src="images/sarah-international-logo.svg" alt="Sarah International">
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
       <span></span>
     </button>
-    <nav class="main-nav" aria-label="Primary">
+    <nav class="main-nav" id="primary-navigation" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="hydraulic-cylinders.html">Hydraulic Cylinders</a></li>
-        <li><a href="excavator-attachments.html">Excavator Attachments</a></li>
-        <li><a href="drilling-solutions.html" aria-current="page">Drilling Solutions</a></li>
-        <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
+        <li class="nav-product-menu is-active">
+          <button class="nav-product-toggle" type="button" aria-expanded="false" aria-controls="products-submenu">
+            <span>Products</span><span class="nav-chevron" aria-hidden="true"></span>
+          </button>
+          <ul class="product-submenu" id="products-submenu">
+            <li><a href="hydraulic-cylinders.html">Hydraulic Cylinders</a></li>
+            <li><a href="excavator-attachments.html">Excavator Attachments</a></li>
+            <li><a href="drilling-solutions.html" aria-current="page">Drilling Solutions</a></li>
+            <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
+          </ul>
+        </li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
