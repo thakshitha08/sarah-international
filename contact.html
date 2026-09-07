@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Sarah International</title>
+<meta name="description" content="Get a quote from Sarah International for hydraulic cylinders, excavator attachments, drilling solutions, or contract heavy-metal fabrication.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">Sarah <span>International</span></span>
+      <span class="brand-tagline">Heavy Equipment Manufacturing</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+    </button>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hydraulic-cylinders.html">Hydraulic Cylinders</a></li>
+        <li><a href="excavator-attachments.html">Excavator Attachments</a></li>
+        <li><a href="drilling-solutions.html">Drilling Solutions</a></li>
+        <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="hero-eyebrow">Get In Touch</span>
+      <h1>Let's power your next project</h1>
+      <p class="lede">Looking for a reliable manufacturing partner? Tell us about your hydraulic cylinder, attachment, drilling, or fabrication requirement and our team will follow up with a tailored quote.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <h2>Contact Details</h2>
+          <dl>
+            <dt>Phone</dt>
+            <dd>+1 (555) 010-2938</dd>
+
+            <dt>Email</dt>
+            <dd>info@sarahinternational.com</dd>
+
+            <dt>Address</dt>
+            <dd>Your Company Address<br>City, State, ZIP<br>Country</dd>
+
+            <dt>Business Hours</dt>
+            <dd>Monday &ndash; Friday, 8:00 AM &ndash; 6:00 PM</dd>
+          </dl>
+          <p class="form-note">Prefer email? Send drawings, specifications, or quantities directly to info@sarahinternational.com and a member of our engineering team will respond within one business day.</p>
+        </div>
+
+        <div class="contact-form">
+          <h2>Request a Quote</h2>
+          <!--
+            This is a static form for GitHub Pages (no backend included).
+            Wire it up to a form service such as Formspree, Getform, or
+            Netlify Forms by setting the `action` attribute, or replace
+            the <form> with your own backend endpoint.
+          -->
+          <form action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-field">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company">
+            </div>
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-field">
+              <label for="division">I'm Interested In</label>
+              <select id="division" name="division">
+                <option value="Hydraulic Cylinders">Hydraulic Cylinders</option>
+                <option value="Excavator Attachments">Excavator Attachments</option>
+                <option value="Drilling Solutions">Drilling Solutions</option>
+                <option value="Contract Manufacturing">Contract Manufacturing</option>
+                <option value="Other">Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">Project Details</label>
+              <textarea id="message" name="message" placeholder="Tell us about your specification, quantities, and timeline." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Request</button>
+            <p class="form-note">By submitting, you agree to be contacted by Sarah International regarding your inquiry.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-mark">Sarah <span>International</span></span>
+        <p>Hydraulic cylinders, excavator attachments, drilling equipment, and contract heavy-metal fabrication engineered for the toughest jobsites.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Divisions</h5>
+        <ul>
+          <li><a href="hydraulic-cylinders.html">Hydraulic Cylinders</a></li>
+          <li><a href="excavator-attachments.html">Excavator Attachments</a></li>
+          <li><a href="drilling-solutions.html">Drilling Solutions</a></li>
+          <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li>+1 (555) 010-2938</li>
+          <li>info@sarahinternational.com</li>
+          <li>Your Company Address, City, Country</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Sarah International. All rights reserved.</span>
+      <span>Built for durability, on every jobsite.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
