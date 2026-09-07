@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 110" role="img" aria-labelledby="title desc">
+<title>Sarah International</title><desc>Sample logo for Sarah International heavy equipment manufacturing.</desc>
+<rect x="4" y="8" width="88" height="88" rx="8" fill="#D9531E"/>
+<path d="M27 29h39c9 0 16 7 16 16v20c0 9-7 16-16 16H27V29zm14 13v26h23c3 0 5-2 5-5V47c0-3-2-5-5-5H41z" fill="#fff"/>
+<path d="M109 31h14l12 34 12-34h14l-19 48h-14l-19-48z" fill="#fff"/>
+<text x="174" y="57" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="800" letter-spacing="2">SARAH</text>
+<text x="176" y="84" fill="#D9531E" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="4">INTERNATIONAL</text>
+</svg>
