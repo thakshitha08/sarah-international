@@ -21,16 +21,16 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li class="has-dropdown">
-          <a href="#" class="products-link" aria-haspopup="true">Products</a>
-          <div class="products-dropdown">
-            <a href="hydraulic-cylinders.html">Hydraulic Cylinders</a>
-            <a href="excavator-attachments.html">Excavator Attachments</a>
-            <a href="drilling-solutions.html">Drilling Solutions</a>
-            <a href="contract-manufacturing.html">Contract Manufacturing</a>
+          <button type="button" class="products-link" aria-haspopup="true" aria-expanded="false">Products</button>
+          <div class="products-dropdown" role="menu">
+            <a href="hydraulic-cylinders.html" role="menuitem">Hydraulic Cylinders</a>
+            <a href="excavator-attachments.html" role="menuitem">Excavator Attachments</a>
+            <a href="drilling-solutions.html" role="menuitem">Drilling Solutions</a>
+            <a href="contract-manufacturing.html" role="menuitem">Contract Manufacturing</a>
           </div>
         </li>
-        <li><a href="about.html#commitment">Our Commitment</a></li>
-        <li><a href="contact.html" class="nav-contact">Contact</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="nav-contact" aria-current="page">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -122,11 +122,11 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img class="brand-logo" src="images/logo.svg" alt="Sarah International">
-        <p>Hydraulic cylinders, excavator attachments, drilling equipment, and contract heavy-metal fabrication engineered for the toughest jobsites.</p>
+        <a href="index.html" class="brand"><img class="brand-logo" src="images/logo.svg" alt="Sarah International"></a>
+        <p>Connecting global markets with dependable engineering products, industrial solutions, and long-term supply partnerships.</p>
       </div>
       <div class="footer-col">
-        <h5>Divisions</h5>
+        <h5>Products</h5>
         <ul>
           <li><a href="hydraulic-cylinders.html">Hydraulic Cylinders</a></li>
           <li><a href="excavator-attachments.html">Excavator Attachments</a></li>
@@ -138,6 +138,7 @@
         <h5>Company</h5>
         <ul>
           <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -152,11 +153,10 @@
     </div>
     <div class="footer-bottom">
       <span>&copy; <span id="year"></span> Sarah International. All rights reserved.</span>
-      <span>Built for durability, on every jobsite.</span>
+      <span>A Global Partner for a Brighter Tomorrow.</span>
     </div>
   </div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>
