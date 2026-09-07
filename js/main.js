@@ -1,40 +1,46 @@
-// Sarah International — navigation and small UI helpers
 document.addEventListener('DOMContentLoaded', function () {
-  var toggle = document.querySelector('.nav-toggle');
-  var nav = document.querySelector('.main-nav');
-  var dropdown = document.querySelector('.has-dropdown');
-  var productsLink = document.querySelector('.products-link');
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.main-nav');
+  const dropdown = document.querySelector('.has-dropdown');
+  const productsButton = document.querySelector('.products-link');
 
   if (toggle && nav) {
     toggle.addEventListener('click', function () {
-      var isOpen = nav.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      const open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   }
 
-  if (productsLink && dropdown) {
-    productsLink.addEventListener('click', function (event) {
-      if (window.innerWidth <= 980) {
-        event.preventDefault();
-        dropdown.classList.toggle('open');
+  if (productsButton && dropdown) {
+    productsButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      const open = dropdown.classList.toggle('open');
+      productsButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove('open');
+        productsButton.setAttribute('aria-expanded', 'false');
       }
     });
   }
 
   document.querySelectorAll('.main-nav a').forEach(function (link) {
     link.addEventListener('click', function () {
-      if (link.classList.contains('products-link') && window.innerWidth <= 980) return;
       if (nav) nav.classList.remove('is-open');
       if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      if (dropdown) dropdown.classList.remove('open');
+      if (productsButton) productsButton.setAttribute('aria-expanded', 'false');
     });
   });
 
-  var yearEl = document.getElementById('year');
+  const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  var reveals = document.querySelectorAll('.reveal');
+  const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
+    const observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
