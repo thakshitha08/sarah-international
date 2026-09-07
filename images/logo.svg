@@ -1,11 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" role="img" aria-label="Sarah International">
-  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f0c873"/><stop offset="1" stop-color="#c9953e"/></linearGradient></defs>
-  <g transform="translate(3 6)">
-    <circle cx="25" cy="24" r="21" fill="none" stroke="#fff" stroke-width="2.2" opacity=".9"/>
-    <path d="M9 31c8-13 18-19 34-18-4 4-7 8-8 14-8 1-15 4-22 9z" fill="url(#g)"/>
-    <path d="M10 13c7-6 17-8 28-4" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
-    <path d="M12 38c8 5 18 6 28 1" fill="none" stroke="#8db0c8" stroke-width="2.5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 92" role="img" aria-label="Sarah International">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7d47a"/>
+      <stop offset="1" stop-color="#d6a344"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173f63"/>
+      <stop offset="1" stop-color="#0b2035"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4 4)">
+    <circle cx="42" cy="42" r="36" fill="url(#blue)" stroke="#f4f6f7" stroke-width="3"/>
+    <path d="M13 48c11-21 29-31 56-29-8 7-13 14-15 24-15 1-27 7-39 16z" fill="url(#gold)"/>
+    <path d="M16 25c11-10 27-14 45-10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <path d="M17 60c12 8 28 10 43 3" fill="none" stroke="#9bb5c9" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="42" cy="42" r="36" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
   </g>
-  <text x="59" y="29" fill="#fff" font-family="Georgia,serif" font-size="23" letter-spacing="3">SARAH</text>
-  <text x="60" y="45" fill="#d8e0e7" font-family="Arial,sans-serif" font-size="7.5" letter-spacing="4.5">INTERNATIONAL</text>
+  <text x="92" y="43" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="31" letter-spacing="4">SARAH</text>
+  <text x="94" y="65" fill="#d9e3eb" font-family="Arial, Helvetica, sans-serif" font-size="10.5" letter-spacing="6">INTERNATIONAL</text>
 </svg>
