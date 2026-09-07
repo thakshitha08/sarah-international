@@ -595,3 +595,284 @@ p{margin:0 0 1em;max-width:62ch;}
   white-space:nowrap;
 }
 
+
+/* ===========================================================
+   2026 Visual Refresh
+   =========================================================== */
+
+/* Header / logo */
+.site-header{
+  box-shadow:0 8px 28px rgba(5,13,23,.18);
+  backdrop-filter:saturate(120%);
+}
+.site-header .container{height:78px;}
+.brand{flex:0 0 auto;min-width:190px;}
+.brand-logo{width:205px;height:auto;display:block;}
+.main-nav ul{align-items:center;gap:.35rem;}
+.main-nav > ul > li > a,
+.nav-product-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  min-height:42px;
+  padding:.55rem .72rem;
+  border:1px solid transparent;
+  border-radius:3px;
+  font-family:var(--font-display);
+  font-size:.8rem;
+  letter-spacing:.075em;
+  text-transform:uppercase;
+  color:#CBD3DC;
+  background:transparent;
+  cursor:pointer;
+  transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease;
+}
+.main-nav > ul > li > a:hover,
+.main-nav > ul > li > a[aria-current="page"],
+.nav-product-menu:hover > .nav-product-toggle,
+.nav-product-menu:focus-within > .nav-product-toggle,
+.nav-product-menu.is-active > .nav-product-toggle{
+  color:#fff;
+  background:rgba(255,255,255,.055);
+  border-color:rgba(255,255,255,.12);
+}
+.nav-product-toggle{appearance:none;}
+.nav-chevron{
+  width:7px;height:7px;
+  border-right:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg) translateY(-2px);
+  transition:transform .2s ease;
+}
+.nav-product-menu:hover .nav-chevron,
+.nav-product-menu:focus-within .nav-chevron,
+.nav-product-menu.is-open .nav-chevron{transform:rotate(225deg) translate(-1px,-1px);}
+.nav-product-menu{position:relative;}
+.product-submenu{
+  position:absolute;
+  top:calc(100% + .55rem);
+  right:0;
+  min-width:265px;
+  padding:.45rem;
+  background:#10243c;
+  border:1px solid rgba(255,255,255,.13);
+  box-shadow:0 18px 45px rgba(0,0,0,.3);
+  border-radius:5px;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(-6px);
+  transition:opacity .18s ease,transform .18s ease,visibility .18s ease;
+  z-index:120;
+}
+.nav-product-menu:hover .product-submenu,
+.nav-product-menu:focus-within .product-submenu,
+.nav-product-menu.is-open .product-submenu{
+  opacity:1;visibility:visible;transform:translateY(0);
+}
+.product-submenu a{
+  display:flex;
+  padding:.78rem .85rem;
+  border:0!important;
+  border-radius:3px;
+  color:#D8E0E8!important;
+  font-size:.78rem!important;
+}
+.product-submenu a:hover,
+.product-submenu a[aria-current="page"]{
+  color:#fff!important;
+  background:rgba(217,83,30,.14);
+  border-color:transparent!important;
+}
+
+/* Home hero gets a subtle full-width background image while retaining the split image. */
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:linear-gradient(90deg,rgba(13,26,43,.96) 0%,rgba(13,26,43,.92) 42%,rgba(13,26,43,.62) 100%),url('../images/02_Quarry_Drilling_Rig.jpg');
+  background-size:cover;
+  background-position:center;
+  opacity:.22;
+  pointer-events:none;
+}
+.hero-grid,.stat-strip{position:relative;z-index:1;}
+.hero-copy{position:relative;z-index:2;}
+.hero-media{z-index:1;max-height:560px;}
+.hero-media img{object-position:center;}
+.hero-media::after{background:linear-gradient(90deg,var(--navy-900) 0%,rgba(13,26,43,.18) 28%,rgba(13,26,43,0) 72%);}
+.hero-actions .btn{box-shadow:0 8px 20px rgba(0,0,0,.14);}
+
+/* Product/page banners use real project photography as quiet background texture. */
+.page-header{
+  isolation:isolate;
+  overflow:hidden;
+  background-color:var(--navy-900);
+  background-size:cover;
+  background-position:center;
+}
+.page-header::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.02);
+}
+.page-header::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(90deg,rgba(13,26,43,.97) 0%,rgba(13,26,43,.86) 48%,rgba(13,26,43,.68) 100%);
+}
+.page-header--hydraulic::before{background-image:url('../images/01_Hydraulic_Cylinders_Product_Range.jpg');}
+.page-header--excavator::before{background-image:url('../images/08_Excavator_Attachments_and_Buckets.jpg');}
+.page-header--drilling::before{background-image:url('../images/02_Quarry_Drilling_Rig.jpg');}
+.page-header--fabrication::before{background-image:url('../images/09_Heavy_Fabrication_Welding.jpg');}
+.page-header--about::before{background-image:url('../images/06_Heavy_Equipment_Manufacturing_Facility.jpg');}
+.page-header--contact::before{background-image:url('../images/06_Heavy_Equipment_Manufacturing_Facility.jpg');}
+.page-header--404::before{background-image:url('../images/02_Quarry_Drilling_Rig.jpg');}
+
+/* Make content imagery consistently sized and polished. */
+.row-media{
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#fff;
+  box-shadow:0 12px 32px rgba(13,26,43,.08);
+}
+.row-media img{
+  width:100%;
+  height:clamp(240px,30vw,430px);
+  object-fit:cover;
+  object-position:center;
+  transition:transform .45s ease;
+}
+.feature-row:hover .row-media img{transform:scale(1.025);}
+.thumb{overflow:hidden;}
+.thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.card-grid{box-shadow:0 14px 35px rgba(13,26,43,.07);}
+.division-card{
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.division-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(13,26,43,.1);
+  position:relative;
+  z-index:2;
+}
+.division-card .body{padding:1.65rem 1.7rem 1.5rem;}
+.division-card h3{font-size:1.35rem;}
+.btn{box-shadow:0 5px 15px rgba(13,26,43,.08);}
+.btn:hover{transform:translateY(-1px);}
+
+/* Improve section rhythm and technical-industrial detailing. */
+.section{position:relative;}
+.section:not(.section-dark)::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;
+  width:42px;height:3px;
+  background:var(--orange-600);
+  opacity:.9;
+}
+.section-head{margin-bottom:2rem;}
+.section-head h2{letter-spacing:.02em;}
+.section-alt{background:#fff;}
+.tag-row li{transition:background-color .18s ease,color .18s ease,border-color .18s ease;}
+.tag-row li:hover{background:var(--navy-900);color:#fff;border-color:var(--navy-900);}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{
+  outline:0;
+  border-color:var(--orange-600);
+  box-shadow:0 0 0 3px rgba(217,83,30,.12);
+}
+.site-footer{margin-top:0;}
+
+/* Keep large photography from taking over the viewport. */
+.hero-media img,
+.division-card .thumb img,
+.row-media img{
+  max-width:100%;
+}
+.hero-media{min-width:0;}
+
+/* Mobile */
+@media (max-width:980px){
+  .site-header .container{height:72px;}
+  .brand-logo{width:190px;}
+  .main-nav > ul > li > a,.nav-product-toggle{padding:.55rem .55rem;font-size:.75rem;}
+  .main-nav ul{gap:.1rem;}
+}
+@media (max-width:860px){
+  .site-header .container{height:72px;}
+  .nav-toggle{display:flex;}
+  .main-nav{
+    top:72px;
+    max-height:0;
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  .main-nav.is-open{max-height:calc(100vh - 72px);overflow-y:auto;}
+  .main-nav > ul{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:.35rem 0 .7rem;}
+  .main-nav > ul > li > a,
+  .nav-product-toggle{
+    width:100%;
+    justify-content:space-between;
+    min-height:48px;
+    padding:.85rem 1.5rem;
+    border-radius:0;
+    text-align:left;
+  }
+  .nav-product-menu{position:static;}
+  .product-submenu{
+    position:static;
+    min-width:0;
+    padding:0 1rem .45rem 1rem;
+    background:rgba(0,0,0,.12);
+    border:0;
+    box-shadow:none;
+    border-radius:0;
+    opacity:1;
+    visibility:visible;
+    transform:none;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .22s ease;
+  }
+  .nav-product-menu.is-open .product-submenu{max-height:320px;}
+  .product-submenu a{padding:.75rem 1rem .75rem 2rem!important;}
+  .nav-product-menu:hover .product-submenu,
+  .nav-product-menu:focus-within .product-submenu{max-height:0;}
+  .nav-product-menu.is-open:hover .product-submenu,
+  .nav-product-menu.is-open:focus-within .product-submenu{max-height:320px;}
+  .hero-copy{padding:3.5rem 1.5rem;}
+}
+@media (max-width:760px){
+  .container{padding-left:1.15rem;padding-right:1.15rem;}
+  .hero h1{font-size:clamp(2.15rem,10vw,3rem);}
+  .hero .lede{font-size:1rem;}
+  .hero-media{height:260px;max-height:none;}
+  .hero-media img{height:100%;}
+  .page-header{padding:2.7rem 0 2.45rem;}
+  .page-header .lede{font-size:.96rem;}
+  .section{padding:3.25rem 0;}
+  .feature-row{gap:1.8rem;padding:2.4rem 0;}
+  .row-media img{height:270px;}
+  .section-head{display:block;}
+  .section-head p{margin-top:.7rem;}
+  .hero-actions .btn{width:100%;justify-content:center;}
+}
+@media (max-width:520px){
+  .brand-logo{width:170px;}
+  .hero-media{height:220px;}
+  .row-media img{height:235px;}
+  .page-header h1{font-size:2.05rem;}
+  .stat-strip div{padding:1.2rem 1rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{transition:none!important;animation:none!important;}
+}
