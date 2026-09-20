@@ -30,9 +30,11 @@ button,input,textarea,select{font:inherit}
 
 /* HEADER */
 .site-header{position:absolute;top:0;left:0;width:100%;z-index:100;background:linear-gradient(180deg,rgba(4,20,34,.86),rgba(4,20,34,.34),transparent);border-bottom:1px solid rgba(255,255,255,.09)}
-.site-header .container{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-.brand{display:flex;align-items:center;flex:0 0 auto}
-.brand-logo{width:205px;height:auto}
+.site-header .container{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+/* Logo sits on a clean white plate so the navy/gold artwork keeps its true colours on the dark header */
+.brand{display:flex;align-items:center;flex:0 0 auto;background:#fff;border-radius:8px;padding:7px 15px;box-shadow:0 8px 22px rgba(0,0,0,.26),inset 0 -3px 0 var(--gold);transition:transform .2s ease,box-shadow .2s ease}
+.brand:hover{transform:translateY(-1px);box-shadow:0 10px 26px rgba(0,0,0,.32),inset 0 -3px 0 var(--gold)}
+.brand-logo{height:56px;width:auto;max-width:none}
 .main-nav>ul{list-style:none;display:flex;align-items:center;gap:7px;margin:0;padding:0}
 .main-nav li{position:relative}
 .main-nav>ul>li>a,.products-link{display:flex;align-items:center;justify-content:center;gap:9px;padding:14px 15px;color:rgba(255,255,255,.96);font-size:.86rem;font-weight:500;white-space:nowrap;border-radius:5px;transition:color .2s ease,background .2s ease,transform .2s ease}
@@ -199,20 +201,122 @@ body.page-services .page-header{--page-bg:url('../images/06_Heavy_Equipment_Manu
 
 /* FOOTER */
 .site-footer{background:#061827;color:#fff;border-top:1px solid rgba(255,255,255,.08);padding:35px 0 0}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.1fr;gap:45px;padding-bottom:27px}.footer-brand .brand-logo{width:185px;margin-bottom:14px}.footer-brand p{font-size:.76rem;line-height:1.6;color:#9fb0bd;max-width:360px}.footer-col h5{font-family:var(--condensed);font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;color:#fff;margin:4px 0 12px}.footer-col ul{list-style:none;margin:0;padding:0}.footer-col li{margin:6px 0;color:#9fb0bd;font-size:.76rem}.footer-col a:hover{color:var(--gold)}.footer-bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.1);padding:13px 0;color:#7f929f;font-size:.66rem}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.1fr;gap:45px;padding-bottom:27px}.footer-brand .brand{display:inline-flex;margin-bottom:16px}.footer-brand .brand-logo{height:56px}.footer-brand p{font-size:.76rem;line-height:1.6;color:#9fb0bd;max-width:360px}.footer-col h5{font-family:var(--condensed);font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;color:#fff;margin:4px 0 12px}.footer-col ul{list-style:none;margin:0;padding:0}.footer-col li{margin:6px 0;color:#9fb0bd;font-size:.76rem}.footer-col a:hover{color:var(--gold)}.footer-bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.1);padding:13px 0;color:#7f929f;font-size:.66rem}
+
+/* DRILLING SOLUTIONS PAGE */
+.page-header .lede-strong{font-size:1.14rem;font-weight:500;color:#fff;max-width:840px;margin:0 0 12px}
+.intro-band{background:#fff;border-bottom:1px solid var(--line);padding:58px 0}
+.intro-cols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.intro-cols p{margin:0;padding-left:22px;border-left:3px solid var(--gold);font-size:1rem;line-height:1.75;color:#4b5d6e}
+.h2-md{font-size:clamp(1.75rem,2.7vw,2.4rem);line-height:1.12}
+.split-head{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:36px}
+.split-head h2{margin-bottom:0}
+.split-copy p{margin:0 0 14px;font-size:.95rem;line-height:1.75}
+.split-copy p:last-child{margin-bottom:0}
+.split-copy.on-dark p{color:#b9c7d1}
+.label-accent{display:flex;align-items:center;gap:12px;margin:0 0 16px;font-family:var(--condensed);font-weight:500;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--navy-3)}
+.label-accent:before{content:'';width:14px;height:7px;background:var(--gold);flex:0 0 auto}
+.chip-row{display:flex;flex-wrap:wrap;gap:.55rem;list-style:none;margin:0;padding:0}
+.chip{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:4px;background:var(--soft);padding:.42rem .9rem;font-family:var(--condensed);font-size:.84rem;letter-spacing:.03em;color:var(--navy-2);line-height:1.3}
+.chip-row-lg .chip{background:#fff;padding:.62rem 1.15rem;font-size:.92rem;border-color:#cbd6de}
+a.chip{transition:border-color .2s ease,background .2s ease,color .2s ease,transform .2s ease}
+a.chip:hover{border-color:var(--gold-2);background:#fff8e6;color:var(--navy);transform:translateY(-1px)}
+
+/* industry deep-dives */
+.industry{padding:84px 0}
+.industry-top{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.industry.reverse .industry-media{order:2}
+.industry-media{position:relative;margin:0;border-radius:7px;overflow:hidden;box-shadow:var(--shadow);background:#e8edf0}
+.industry-media img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .5s ease}
+.industry-media:hover img{transform:scale(1.03)}
+.industry-badge{position:absolute;top:0;left:0;padding:9px 16px 8px;background:var(--gold);color:var(--navy);font-family:var(--condensed);font-weight:600;font-size:1.15rem;letter-spacing:.06em;line-height:1;border-bottom-right-radius:7px}
+.industry.reverse .industry-badge{left:auto;right:0;border-bottom-right-radius:0;border-bottom-left-radius:7px}
+.industry-copy h2{margin-bottom:16px}
+.industry-copy p{font-size:.95rem;line-height:1.75;margin:0 0 12px}
+.industry-copy p:last-child{margin-bottom:0}
+.industry-detail{display:grid;grid-template-columns:1.1fr .9fr;margin-top:46px;background:#fff;border:1px solid var(--line);border-radius:7px;box-shadow:0 8px 26px rgba(7,28,45,.06);overflow:hidden}
+.detail-col{padding:30px 34px 32px}
+.detail-col+.detail-col{border-left:1px solid var(--line);background:#fbfcfd}
+.detail-col h4{display:flex;align-items:center;gap:12px;margin:0 0 14px;font-family:var(--condensed);font-weight:500;font-size:.85rem;letter-spacing:.13em;text-transform:uppercase;color:var(--navy-3)}
+.detail-col h4:before{content:'';width:14px;height:7px;background:var(--gold);flex:0 0 auto}
+.detail-intro{margin:0 0 12px;font-size:.84rem;color:var(--muted)}
+.industry-detail .spec-list{margin:0;columns:2;column-gap:32px}
+.industry-detail .spec-list li{break-inside:avoid;padding-top:9px;padding-bottom:9px}
+.industry-detail .spec-list li:last-child{border-bottom:1px solid var(--line)}
+.industry-note{display:flex;align-items:center;margin-top:20px;padding:24px 30px;border-radius:7px;border-left:4px solid var(--gold);background:linear-gradient(100deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff}
+.industry-note strong{display:block;margin-bottom:5px;font-family:var(--display);font-size:1.28rem;line-height:1.25;color:#fff}
+.industry-note p{margin:0;max-width:900px;font-size:.92rem;line-height:1.65;color:rgba(255,255,255,.84)}
+.industry-note.note-single p{font-family:var(--display);font-size:1.28rem;line-height:1.35;font-weight:600;color:#fff}
+
+/* product categories */
+.category-grid{gap:20px}
+.category-card:hover{transform:none;box-shadow:0 8px 26px rgba(7,28,45,.06)}
+.category-card .thumb{aspect-ratio:4/3;background:#e9eff5}
+.category-card .body{padding:20px 20px 22px}
+.category-card h3{font-size:1.18rem;line-height:1.2;margin-bottom:8px}
+.category-card p{margin:0;font-size:.82rem;line-height:1.6}
+
+/* why choose */
+.benefit-grid{gap:18px}
+.benefit-grid .bullet-block{padding:28px 26px;border-top:3px solid var(--gold)}
+.benefit-grid .bullet-block h4{margin-bottom:10px;font-family:var(--display);font-size:1.18rem;color:#fff}
+.benefit-grid .bullet-block p{margin:0;font-size:.86rem;line-height:1.7;color:#b9c7d1}
+
+/* approach */
+.approach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:0;padding:0;list-style:none}
+.approach-step{position:relative;padding:28px 26px 30px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:7px;box-shadow:0 8px 26px rgba(7,28,45,.06)}
+.step-no{display:grid;place-items:center;width:46px;height:46px;margin-bottom:16px;border-radius:50%;background:var(--navy);color:var(--gold);font-family:var(--condensed);font-size:1.3rem;font-weight:500}
+.approach-step h4{margin:0 0 8px;font-family:var(--display);font-size:1.3rem;color:var(--navy)}
+.approach-step p{margin:0;font-size:.86rem;line-height:1.65}
+
+/* quality */
+#quality .row-copy p{margin:0 0 12px}
+#quality .row-copy p:last-child{margin-bottom:0}
+#quality .row-copy h2{margin-bottom:16px}
+#quality .row-media img{aspect-ratio:4/3}
+
+/* industries we support */
+.support-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.support-grid .product-card{min-height:0;aspect-ratio:16/9}
+.support-grid .product-card>img{background:#e9eff5}
+.support-grid .product-card:before{background:linear-gradient(180deg,rgba(5,25,42,.08) 0%,rgba(4,20,34,.42) 42%,rgba(4,20,34,.94) 100%)}
+.support-grid .product-card-content{left:20px;right:20px;bottom:18px}
+.support-grid .product-card h3{font-size:1.4rem;margin-bottom:6px}
+.support-grid .product-card p{margin:0;max-width:none;font-size:.82rem;line-height:1.5;color:rgba(255,255,255,.92)}
+
+/* partner CTA */
+.partner{position:relative;overflow:hidden;padding:88px 0;background:var(--navy);color:#fff}
+.partner:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,20,34,.95) 0%,rgba(4,24,41,.86) 52%,rgba(4,24,41,.72) 100%),url('../images/02_Quarry_Drilling_Rig.jpg') center 40%/cover no-repeat}
+.partner-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.partner .kicker{color:var(--gold)}
+.partner h2{color:#fff}
+.partner-copy p{max-width:520px;font-size:.98rem;line-height:1.75;color:rgba(255,255,255,.86)}
+.enquiry-card{padding:34px 36px 36px;background:#fff;border-top:4px solid var(--gold);border-radius:8px;box-shadow:0 26px 60px rgba(0,0,0,.38);color:var(--ink)}
+.enquiry-card h3{margin:0 0 6px;font-family:var(--display);font-size:1.7rem;line-height:1.15;color:var(--navy)}
+.enquiry-lead{margin:0 0 20px;font-size:.92rem}
+.enquiry-sub{margin:0 0 6px;font-family:var(--condensed);font-weight:500;font-size:.82rem;letter-spacing:.13em;text-transform:uppercase;color:var(--navy-3)}
+.enquiry-card .spec-list{margin:0 0 20px;columns:2;column-gap:28px}
+.enquiry-card .spec-list li{break-inside:avoid}
+.enquiry-close{margin:0;font-weight:700;font-size:.92rem;color:var(--navy)}
+.enquiry-card .hero-actions{margin-top:16px}
 
 /* REVEALS */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}.reveal.is-visible{opacity:1;transform:none}
 
 /* RESPONSIVE */
 @media (max-width:1100px){
-  .site-header .container{min-height:70px}.brand-logo{width:185px}.main-nav>ul>li>a,.products-link{padding-inline:11px;font-size:.8rem}.main-nav>ul{gap:2px}
+  .site-header .container{min-height:82px}.brand-logo{height:46px}.main-nav>ul>li>a,.products-link{padding-inline:11px;font-size:.8rem}.main-nav>ul{gap:2px}
   .value-item{padding:22px 16px}.about-layout{grid-template-columns:1fr 1fr;gap:35px}.product-card-grid{gap:9px}.product-card-content{left:13px;right:13px}.product-card h3{font-size:1.02rem}
 }
 @media (max-width:860px){
+  .intro-cols,.split-head,.industry-top,.industry-detail,.partner-grid{grid-template-columns:1fr;gap:28px}
+  .intro-band{padding:44px 0}.industry{padding:62px 0}.industry.reverse .industry-media{order:0}.industry.reverse .industry-badge{left:0;right:auto;border-bottom-left-radius:0;border-bottom-right-radius:7px}
+  .industry-detail{margin-top:34px;gap:0}.detail-col+.detail-col{border-left:0;border-top:1px solid var(--line)}
+  .approach-grid{grid-template-columns:repeat(2,1fr)}.benefit-grid{grid-template-columns:repeat(2,1fr)}.support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .partner{padding:66px 0}.split-head{margin-bottom:28px}
   .container{width:min(var(--container),calc(100% - 36px))}
-  .site-header .container{min-height:68px}.nav-toggle{display:flex}
-  .main-nav{display:none;position:absolute;top:68px;left:0;width:100%;padding:10px 18px 20px;background:rgba(5,22,37,.985);border-top:1px solid rgba(255,255,255,.1);box-shadow:0 20px 35px rgba(0,0,0,.24);max-height:calc(100vh - 68px);overflow-y:auto}
+  .site-header .container{min-height:76px}.nav-toggle{display:flex}
+  .main-nav{display:none;position:absolute;top:76px;left:0;width:100%;padding:10px 18px 20px;background:rgba(5,22,37,.985);border-top:1px solid rgba(255,255,255,.1);box-shadow:0 20px 35px rgba(0,0,0,.24);max-height:calc(100vh - 76px);overflow-y:auto}
   .main-nav.is-open{display:block}
   .main-nav>ul{display:flex;flex-direction:column;align-items:stretch;gap:3px}
   .main-nav>ul>li>a,.products-link{width:100%;justify-content:space-between;padding:13px 12px;font-size:.86rem}
@@ -232,8 +336,10 @@ body.page-services .page-header{--page-bg:url('../images/06_Heavy_Equipment_Manu
   .card-grid{grid-template-columns:repeat(2,1fr)}.feature-row{gap:30px}.footer-grid{grid-template-columns:1.5fr 1fr 1fr}.footer-grid .footer-col:last-child{grid-column:2}.contact-grid{grid-template-columns:1fr}
 }
 @media (max-width:560px){
+  .industry{padding:52px 0}.detail-col{padding:24px 20px 26px}.industry-detail .spec-list,.enquiry-card .spec-list{columns:1}.industry-note{padding:20px 20px}.industry-note strong,.industry-note.note-single p{font-size:1.15rem}
+  .approach-grid,.benefit-grid,.support-grid{grid-template-columns:1fr}.support-grid .product-card{aspect-ratio:16/10}.enquiry-card{padding:26px 22px 28px}.enquiry-card h3{font-size:1.45rem}.intro-cols p{font-size:.95rem}
   .container{width:calc(100% - 30px)}
-  .site-header .container{min-height:64px}.brand-logo{width:154px}.nav-toggle{width:42px;height:40px}.main-nav{top:64px;max-height:calc(100vh - 64px)}
+  .site-header .container{min-height:68px}.brand{padding:5px 11px;border-radius:7px}.brand-logo{height:38px}.nav-toggle{width:42px;height:40px}.main-nav{top:68px;max-height:calc(100vh - 68px)}
   .hero,.hero-grid,.hero-copy{min-height:650px}.hero-media img{object-position:60% center}.hero-media:after{background:linear-gradient(90deg,rgba(3,20,35,.88),rgba(4,24,41,.64)),linear-gradient(0deg,rgba(4,20,34,.72),transparent 70%)}.hero-copy{padding:105px 0 45px}.hero h1{font-size:2.7rem}.lede{font-size:.91rem}.hero-actions{gap:10px}.hero-actions .btn{width:auto;flex:0 1 auto}
   .page-header{min-height:555px;padding:105px 0 48px}.page-header h1{font-size:2.65rem}.page-header .lede{font-size:.92rem}.page-header .hero-actions{gap:10px}
   .value-grid{grid-template-columns:1fr}.value-item{border-right:0!important;border-bottom:1px solid var(--line)}.value-item:last-child{border-bottom:0}.value-item{padding:20px 5px}
@@ -243,5 +349,5 @@ body.page-services .page-header{--page-bg:url('../images/06_Heavy_Equipment_Manu
   .footer-grid{grid-template-columns:1fr 1fr;gap:25px}.footer-grid .footer-brand{grid-column:1/-1}.footer-grid .footer-col:last-child{grid-column:auto}.footer-bottom{flex-direction:column}
 }
 @media (max-width:390px){
-  .brand-logo{width:140px}.hero h1{font-size:2.35rem}.page-header h1{font-size:2.3rem}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .btn{width:100%}.stats-card{grid-template-columns:1fr}.stats-card div{border-right:0;border-bottom:1px solid var(--line)}.stats-card div:last-child{border-bottom:0}.products-head{flex-direction:column}.view-all{align-self:flex-end}
+  .brand-logo{height:34px}.hero h1{font-size:2.35rem}.page-header h1{font-size:2.3rem}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .btn{width:100%}.stats-card{grid-template-columns:1fr}.stats-card div{border-right:0;border-bottom:1px solid var(--line)}.stats-card div:last-child{border-bottom:0}.products-head{flex-direction:column}.view-all{align-self:flex-end}
 }
